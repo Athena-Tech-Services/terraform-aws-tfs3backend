@@ -19,7 +19,7 @@ data "aws_iam_policy_document" "tf_role_assume_role_policy" {
 resource "aws_iam_role" "tf_role" {
   name               = "${var.project_name}-tf-role"
   tags               = local.tags
-  assume_role_policy = data.aws_iam_policy_document.tf_role_assume_role_policy
+  assume_role_policy = data.aws_iam_policy_document.tf_role_assume_role_policy.json
 
 }
 
