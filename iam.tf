@@ -42,7 +42,7 @@ data "aws_iam_policy_document" "tf_role_s3_dynamo_policy" {
     actions = [
       "dynamodb:GetItem",
       "dynamodb:PutItem",
-      "dyanmodb:DeleteItem"
+      "dynamodb:DeleteItem"
     ]
     resources = [aws_dynamodb_table.dynamo_table.arn]
   }
