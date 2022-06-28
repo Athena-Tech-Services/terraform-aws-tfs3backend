@@ -10,14 +10,6 @@ data "aws_iam_policy_document" "tf_role_assume_role_policy" {
   statement {
     actions = ["sts:AssumeRole"]
     principals {
-       type        = "Service"
-      identifiers = ["codebuild.amazonaws.com"]
-    }
-  }
-
-  statement {
-    actions = ["sts:AssumeRole"]
-    principals {
       type        = "AWS"
       identifiers = local.principal_arns
     }
